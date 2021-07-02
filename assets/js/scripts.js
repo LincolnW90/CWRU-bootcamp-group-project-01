@@ -5,13 +5,14 @@ var filmArray1 = [];
 var filmArray2 = [];
 var finalResults = [];
 
-//checkActors function which will eventually be triggered by a users button press
-function checkActors() {
-    //user responses, set as defined strings currently but will be set to take in values based on what the user types in
-    userResponse1 = "Ben Affleck"
-    userResponse2 = "Matt Damon"
+userResponse1 = "Julia Roberts"
+userResponse2 = "Dermot Mulroney"
 
-    //inital fetch request for the first actor, retrieves Imdb ID data to then be used 
+function checkFirstActor() {
+//user responses, set as defined strings currently but will be set to take in values based on what the user types in
+    
+
+//inital fetch request for the first actor, retrieves Imdb ID data to then be used 
     fetch("https://data-imdb1.p.rapidapi.com/actor/imdb_id_byName/" + userResponse1 + "/", {
         "method": "GET",
         "headers": {
@@ -44,13 +45,16 @@ function checkActors() {
                     return response.json();
                 })
                 //build an array from the desired data for the first actor, to be checked with the next array
-                .then(function (data) {
-                    for (i = 0; i < data.Roles.movies.length; i++) {
-                        if (filmArray1.includes(data.Roles.movies[i][0].title) === false) {
-                            filmArray1.push(data.Roles.movies[i][0].title)
+                .then(function (response) {
+                    
+                    for (var i = 0; i < response.Roles.movies.length; i++) {
+                        if (filmArray1.includes(response.Roles.movies[i][0].title) === false) {
+                            filmArray1.push(response.Roles.movies[i][0].title)
+                            console.log(filmArray1)
+
                         }
                     }
-                    console.log(filmArray1)
+                    checkSecondActor();
                 })
 
                 .catch(err => {
@@ -60,10 +64,17 @@ function checkActors() {
         })
         .catch(err => {
             console.error(err);
-
+            
         });
 
-    //Second series of fetch requests for the second entered actor
+console.log(filmArray1)
+
+    }
+
+function checkSecondActor(){
+
+   
+//Second series of fetch requests for the second entered actor
     fetch("https://data-imdb1.p.rapidapi.com/actor/imdb_id_byName/" + userResponse2 + "/", {
         "method": "GET",
         "headers": {
@@ -95,20 +106,21 @@ function checkActors() {
                 })
                 //build an array from the desired data for the second actor, to be checked with the first array
                 .then(function (response) {
+                    
+                
                     for (var i = 0; i < response.Roles.movies.length; i++) {
                         if (filmArray2.includes(response.Roles.movies[i][0].title) === false) {
                             filmArray2.push(response.Roles.movies[i][0].title)
-                            console.log(filmArray2)
-
                         }
-
-
+                        
+                    
                     }
                     //pushes the films the two actors have in common to a new array
                     for (var j = 0; j < filmArray2.length; j++) {
 
-                        if (filmArray1.includes(filmArray2[j])) {
+                        if (filmArray1.includes(filmArray2[j]) ) {
                             finalResults.push(filmArray2[j])
+                            
 
 
 
@@ -117,24 +129,33 @@ function checkActors() {
                             console.log("no match")
                         }
                     }
-
+                    
+                    console.log(filmArray1)
+                    console.log(filmArray2)
                     console.log(finalResults)
+
 
                     //for loop to iterate through this created array and retrieve the poster data from a new API
                     for (i = 0; i < finalResults.length; i++) {
 
                         matchedMovie = finalResults[i]
-                        var movieTest = fetch(
+                         fetch(
                             "http://www.omdbapi.com/?s=" + matchedMovie + "&apikey=d86e2804"
                         )
                             .then(function (response) {
                                 return response.json();
                             })
                             .then(function (response) {
+                                
+                                
                                 var poster = response.Search[0].Poster
                                 console.log(poster)
+                                
+                            
                             });
                     };
+                })
+                    
 
                 })
 
@@ -144,16 +165,5 @@ function checkActors() {
                     console.error(err);
                 });
 
-        })
-        .catch(err => {
-            console.error(err);
-
-        })
-
-    console.log(filmArray1)
-    console.log(filmArray2)
-
-
 }
-
-checkActors();
+checkFirstActor();
