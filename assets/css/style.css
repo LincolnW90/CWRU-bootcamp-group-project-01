@@ -9,6 +9,7 @@
     /* for testing */
     border-bottom: black solid;
     justify-content: center;
+    text-align: center;
 }
 
 .choice-container{
@@ -16,6 +17,8 @@
     border: solid black;
     margin: 30px 1%;
     border-radius: 5px;
+    justify-content: center;
+    text-align: center;
 }
 
 .hero{
@@ -27,3 +30,36 @@ header{
     background-color: royalblue;
 }
 
+.function-container{
+    border-bottom: black solid;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+button{
+    font-size: larger;
+}
+
+header{
+    padding: 0 5%;
+}
+
+#title{
+    font-size: 40px;
+}
+#history-title{
+    font-size: larger;
+    text-align: center;
+    padding-top: 50px;
+}
+a{
+    color: white;
+    border: black solid 1px;
+    border-radius: 5px;
+}
+#clock-container{
+padding-bottom: 20px;
+}
+#saveFunction1{
+    margin: auto;
+}

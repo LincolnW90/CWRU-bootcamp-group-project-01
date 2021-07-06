@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,62 +9,104 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
     <header>
         <div class="columns">
-            <h1 class="column">Movie Matcher!</h1>
-            <p class="column has-text-right">***Clock goes here***</p>    
+            <h1 class="column" id="title">Movie Matcher!</h1>
+            <div id="clock-container" class="column has-text-right">
+                <p id="currentDate"></p>
+                <p id="currentTime"></p>
+                <a href="./saved-searches.html">View Saved Searches</a>
+            </div>
+
         </div>
     </header>
     <div>
         <section class="hero is-primary">
             <div class="column is-8 is-offset-2">
                 <p class="title">Welcome to Movie Matcher!</p>
-                <p class="subtitle">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed alias distinctio, nemo ipsam neque libero ea tenetur officia laudantium nesciunt beatae dolores accusamus illum eos! Possimus rem explicabo doloremque pariatur.</p>    
+                <p class="subtitle">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed alias distinctio, nemo ipsam neque libero ea tenetur officia laudantium nesciunt beatae dolores accusamus illum eos!Possimus rem explicabo doloremque pariatur.</p>
             </div>
         </section>
         <!-- open page choices -->
         <div id="choice-container" class="columns">
-            <div  class="column  choice-container">
+            <div class="column  choice-container">
                 <p>Can't remember all the films your favorite actor has been in? Wonder no more!</p>
-                <button  class="column is-4 is-offset-4">Find your actor's films</button>
+                <button class="column is-4 is-offset-4" id="function1show">Find your actor's films</button>
             </div>
-            <div  class="column choice-container">
+            <div class="column choice-container">
                 <p>Want to know what movie some actors were both in? We can figure that out for you!</p>
-                <button class="column is-4 is-offset-4">Find shared films</button>
+                <button class="column is-4 is-offset-4" id="function2show">Find shared films</button>
             </div>
-            <div  class="column choice-container">
+            <div class="column choice-container">
                 <p>Need to know more facts about a particular movie? We'll get you the basic rundown!</p>
-                <button class="column is-4 is-offset-4">Find out about a film</button>
+                <button class="column is-4 is-offset-4" id="function3show">Find out about a film</button>
             </div>
         </div>
-        
+
+        <!-- choose function divs -->
         <!-- 1st function section -->
-        <div id="function1-container" class="columns has-border-width-3">
-            <form id="function1-form" class="column is-6 is-offset-3 choice-container">
-                <p class="column">Which actor are you looking for?</p>
-                <div class="column">
-                <textarea placeholder="Actors name"></textarea> <br>
-                <button type="submit">Find their movies</button>
+        <div id="function1-container" class="columns has-border-width-3 function-container">
+            <div id="function1-block" class="column">
+                <div class="columns is-justify-content-center">
+                    <div class="column choice-container is-4">
+                        <p>Which actor are you looking for?</p>
+                        <input placeholder="Actors name"></input> <br>
+                        <button type="submit" id="function1Btn">Find their movies</button>
+                    </div>
+                    <!-- display top movie results div -->
+                    <div class="column is-4 choice-container">
+                        <p>Your actors top movies</p>
+                        <ul id="top-movies-holder">
+                            <li>***test***</li>
+                        </ul>
+                    </div>
                 </div>
-            </form>
+                <div id="Btn-container" class="columns is-justify-content-center">
+                    <button id="saveFunction1" class="saveBtn">Save This Search</button>
+                </div>
+            </div>
         </div>
         <!-- 2nd function section -->
-        <div id="function2-container" class="columns has-border-width-3">
-            <p>Enter the names of the actors you want to compare</p>
-            <div id="choice-1" class="column choice-container">
-                <p>Enter your first actor</p>
+        <div id="function2-container" class="column has-border-width-3 function-container">
+            <div id="function2-block" class="column choice-container">
+                <p>Enter the names of the actors you want to compare</p>
+                <div class="columns">
+                    <div id="choice-1" class="column is-3 is-offset-3 choice-container">
+                        <p>Enter your first actor</p>
+                        <input placeholder="Actors name"></input> <br>
+                    </div>
+                    <div id="choice-2" class="column is-3 choice-container">
+                        <p>Enter your second actor</p>
+                        <input placeholder="Actors name"></input> <br>
+                    </div>
+                </div>
+                <button type="submit" id="function2Btn">Find Their Shared Movies</button>
+                <div id="shared-movie-container" class="column is-4 is-offset-4 choice-container">
+                    <p>Shared Movies</p>
+                    <ul id="list-of-shared-movies">
+                        ***test***
+                    </ul>
+                </div>
             </div>
-            <div id="choice-2" class="column choice-container">
-                <p>Enter your second actor</p>
-
+            <div id="Btn-container" class="columns is-justify-content-center">
+                <button id="saveFunction2" class="saveBtn">Save This Search</button>
             </div>
         </div>
         <!-- 3rd function section -->
-        <div id="function3-container" class="columns has-border-width-3">
-
+        <div id="function3-container" class="column has-border-width-3 function-container">
+            <div id="function3-block" class="column choice-container">
+                <p>Enter the name of the movie you want to know about</p>
+                <div class="columns">
+                    <input placeholder="Movie name"></input>
+                </div>
+            </div>
         </div>
     </div>
+
+
+
 
 
     <!-- scripts -->
@@ -71,4 +114,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/scripts.js"></script>
 </body>
+
 </html>
