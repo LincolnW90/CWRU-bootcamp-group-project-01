@@ -1,3 +1,6 @@
+var posterDisplay = document.getElementById("shared-movie-container")
+
+
 // set up date and clock
 var todaysDate = document.querySelector('#currentDate');
 var date = moment().format('dddd, MMMM Do YYYY');
@@ -16,13 +19,17 @@ var updateClock = setInterval(function(){
 var filmArray1 = [];
 var filmArray2 = [];
 var finalResults = [];
-
-userResponse1 = "Julia Roberts"
-userResponse2 = "Dermot Mulroney"
+userResponse1 = ""
+userResponse2 = ""
 
 function checkFirstActor() {
+    debugger
     //user responses, set as defined strings currently but will be set to take in values based on what the user types in
-
+    posterDisplay.innerHTML = ""
+    filmArray1.length = 0
+    filmArray2.length = 0
+    finalResults.length = 0
+    userResponse1 = document.querySelector('#choice-1').value
 
     //inital fetch request for the first actor, retrieves Imdb ID data to then be used 
     fetch("https://data-imdb1.p.rapidapi.com/actor/imdb_id_byName/" + userResponse1 + "/", {
@@ -36,8 +43,8 @@ function checkFirstActor() {
     })
         //taking that initial fetch, logging data as a variable and then passing it to the next fetch request
         .then(function (response) {
-            var ActorID = response.Actors[0].imdb_id
             console.log(response)
+            var ActorID = response.Actors[0].imdb_id
 
 
             fetch("https://data-imdb1.p.rapidapi.com/actor/id/" + ActorID + "/all_roles/", {
@@ -64,10 +71,12 @@ function checkFirstActor() {
         .catch(err => {
             console.error(err);
         });
-    console.log(filmArray1)
+    
 }
 
 function checkSecondActor() {
+    userResponse2 = document.querySelector('#choice-2').value
+
     //Second series of fetch requests for the second entered actor
     fetch("https://data-imdb1.p.rapidapi.com/actor/imdb_id_byName/" + userResponse2 + "/", {
         "method": "GET",
@@ -126,6 +135,9 @@ function checkSecondActor() {
                             })
                             .then(function (response) {
                                 var poster = response.Search[0].Poster
+                                var posterImg = document.createElement("img")
+                                posterImg.setAttribute("src", poster)
+                                posterDisplay.appendChild(posterImg)
                                 console.log(poster)
                             });
                     };
@@ -136,4 +148,23 @@ function checkSecondActor() {
         });
 }
 
+<<<<<<< HEAD
 checkFirstActor();
+=======
+function getMovieInfo() {
+
+    userResonse3 = document.querySelector('#movieChoice').value
+
+    fetch(
+        "http://www.omdbapi.com/?t=" + userResonse3 + "&apikey=d86e2804"
+    )
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (response) {
+            console.log(response)
+})
+}
+
+document.getElementById("function2Btn").addEventListener("click", checkFirstActor)
+>>>>>>> 0d18b384538ac06b33ec0ef6c900ff6840d5437d
