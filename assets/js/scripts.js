@@ -148,9 +148,6 @@ function checkSecondActor() {
         });
 }
 
-<<<<<<< HEAD
-checkFirstActor();
-=======
 function getMovieInfo() {
 
     userResonse3 = document.querySelector('#movieChoice').value
@@ -167,4 +164,3 @@ function getMovieInfo() {
 }
 
 document.getElementById("function2Btn").addEventListener("click", checkFirstActor)
->>>>>>> 0d18b384538ac06b33ec0ef6c900ff6840d5437d
