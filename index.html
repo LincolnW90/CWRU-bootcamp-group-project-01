@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What were they in?</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="columns">
+            <h1 class="column">Movie Matcher!</h1>
+            <p class="column has-text-right">***Clock goes here***</p>    
+        </div>
+    </header>
+    <div>
+        <section class="hero is-primary">
+            <div class="column is-8 is-offset-2">
+                <p class="title">Welcome to Movie Matcher!</p>
+                <p class="subtitle">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed alias distinctio, nemo ipsam neque libero ea tenetur officia laudantium nesciunt beatae dolores accusamus illum eos! Possimus rem explicabo doloremque pariatur.</p>    
+            </div>
+        </section>
+        <!-- open page choices -->
+        <div id="choice-container" class="columns">
+            <div  class="column  choice-container">
+                <p>Can't remember all the films your favorite actor has been in? Wonder no more!</p>
+                <button  class="column is-4 is-offset-4">Find your actor's films</button>
+            </div>
+            <div  class="column choice-container">
+                <p>Want to know what movie some actors were both in? We can figure that out for you!</p>
+                <button class="column is-4 is-offset-4">Find shared films</button>
+            </div>
+            <div  class="column choice-container">
+                <p>Need to know more facts about a particular movie? We'll get you the basic rundown!</p>
+                <button class="column is-4 is-offset-4">Find out about a film</button>
+            </div>
+        </div>
+        
+        <!-- 1st function section -->
+        <div id="function1-container" class="columns has-border-width-3">
+            <form id="function1-form" class="column is-6 is-offset-3 choice-container">
+                <p class="column">Which actor are you looking for?</p>
+                <div class="column">
+                <textarea placeholder="Actors name"></textarea> <br>
+                <button type="submit">Find their movies</button>
+                </div>
+            </form>
+        </div>
+        <!-- 2nd function section -->
+        <div id="function2-container" class="columns has-border-width-3">
+            <p>Enter the names of the actors you want to compare</p>
+            <div id="choice-1" class="column choice-container">
+                <p>Enter your first actor</p>
+            </div>
+            <div id="choice-2" class="column choice-container">
+                <p>Enter your second actor</p>
+
+            </div>
+        </div>
+        <!-- 3rd function section -->
+        <div id="function3-container" class="columns has-border-width-3">
+
+        </div>
+    </div>
+
+
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/scripts.js"></script>
+</body>
+</html>
