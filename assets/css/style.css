@@ -92,22 +92,6 @@ padding-bottom: 20px;
 
 footer{
     color: white;
-<<<<<<< HEAD
-}
-
-img {
-    border-radius: 5px;
-}
-
-#year-released, #director, #Total-box-office-sales, #star-actors, #rotten-tomatoes {
-    font-weight: 700;
-}
-#choice-1, #choice-2, #movieChoice {
-    margin: 12px 0;
-    text-align: center;
-}
-
-=======
     background: rgb(2,0,36);
     background: linear-gradient(9deg, rgba(2,0,36,1) 0%, rgba(255,255,255,1) 100%, rgba(0,212,255,1) 100%);
     position: absolute;
@@ -158,4 +142,3 @@ border: transparent;
     }
     
 }
->>>>>>> 9953d3594be16211c89a8e49861b150047204885

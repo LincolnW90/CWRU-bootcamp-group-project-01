@@ -201,14 +201,6 @@ function getMovieInfo() {
             var actors = document.createElement("p")
             actors.innerHTML = response.Actors
             starActors.appendChild(actors)
-<<<<<<< HEAD
-            var rating = document.createElement("p")
-            rating.innerHTML = response.Ratings[1].Value
-            rottenTomatoes.appendChild(rating)
-            var singlePoster = document.createElement("img")
-            singlePoster.setAttribute("src", response.Poster)
-            posterForMovie.appendChild(singlePoster)
-=======
             // var rating = document.createElement("p")
             // rating.innerHTML =  response.Ratings[1].Value
             // rottenTomatoes.appendChild(rating)
@@ -217,7 +209,6 @@ function getMovieInfo() {
             // singlePoster.setAttribute("src", response.Poster)
             // posterForMovie.appendChild(singlePoster)
             posterForMovie.setAttribute('src', response.Poster)
->>>>>>> 9953d3594be16211c89a8e49861b150047204885
 
 
 
@@ -225,9 +216,6 @@ function getMovieInfo() {
 }
 
 document.getElementById("function2Btn").addEventListener("click", checkFirstActor)
-<<<<<<< HEAD
-document.getElementById("function3Btn").addEventListener("click", getMovieInfo)
-=======
 document.getElementById("function3Btn").addEventListener("click",  getMovieInfo)
 
 
@@ -252,4 +240,3 @@ function saveSearch2(){
 document.querySelector('#saveFunction2').addEventListener('click',saveSearch2);
 
 
->>>>>>> 9953d3594be16211c89a8e49861b150047204885
