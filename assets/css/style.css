@@ -5,6 +5,13 @@
     line-height: 1.5;
 }
 
+body{
+    text-align: center;
+    background-image: url(../images/lion.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
 #choice-container{
     /* for testing */
     border-bottom: black solid;
@@ -18,10 +25,6 @@
     margin: 30px 1%;
     border-radius: 5px;
     justify-content: center;
-    text-align: center;
-}
-
-.hero{
     text-align: center;
 }
 
@@ -62,16 +65,4 @@ padding-bottom: 20px;
 }
 #saveFunction1{
     margin: auto;
-}
-
-.hidden{
-    display: none;
-}
-
-.gradient{
-    background: linear-gradient(to right,#03b8c5,#017179)
-}
-
-.btnColor{
-    color: white;
 }
