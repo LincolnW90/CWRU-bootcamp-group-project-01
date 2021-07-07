@@ -16,7 +16,7 @@ a website that ...
 <!-- live link here-->
 
 ## contribution
-Made by Lincoln Weiss, Logan Dufek, Enobong Ukpeh, Mason Cain, and Ishaam Smith
+Made by Lincoln Weiss, Logan Dufek, Enobong Ukpeh, and Mason Cain.
 
 ###
 2021 - First Collaborative project for coding course

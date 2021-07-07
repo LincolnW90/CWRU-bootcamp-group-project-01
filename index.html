@@ -19,14 +19,14 @@
                 <p id="currentTime"></p>
                 <a href="./saved-searches.html">View Saved Searches</a>
             </div>
-
         </div>
     </header>
+    
     <div>
         <section class="hero is-primary">
             <div class="column is-8 is-offset-2">
                 <p class="title">Welcome to Movie Matcher!</p>
-                <p class="subtitle">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed alias distinctio, nemo ipsam neque libero ea tenetur officia laudantium nesciunt beatae dolores accusamus illum eos!Possimus rem explicabo doloremque pariatur.</p>
+                <p class="subtitle">If you're here you like movies like we do. Below you'll find some options to either find out about actors, their shared movies, or just general information about your favorite movies</p>
             </div>
         </section>
         <!-- open page choices -->
@@ -98,22 +98,30 @@
         <div id="function3-container" class="column has-border-width-3 function-container">
             <div id="function3-block" class="column choice-container">
                 <p>Enter the name of the movie you want to know about</p>
+                <div class="column">
+                    <input id="movieChoice" placeholder="Movie name"></input> <br>
+                    <button id="function3Btn">Find info</button> <br>
+                </div>
                 <div class="columns choice-container">
+<<<<<<< HEAD
                     <div class="column">
                         <input placeholder="Movie name"></input> <br>
                         <button id="function3Btn">Find info</button> <br>
+=======
+                    <div class="column is-3">
+>>>>>>> 43bb4d1d253c621fa36120cdf29eb12272e3a579
                         <p>Year released: </p><p id="year-released"></p> <br>
-                        <p>Directed by: </p><p id="director"></p>   <br>
-                        <p>Domestic Gross: </p><p id="gross"></p>   <br>
-                        <p>Star Actors: </p> <p id="star-actors"></p> <br>
+                        <p>Directed by: </p><p id="director"></p> <br>
+                        <p>Domestic Gross: </p><p id="Total-box-office-sales"></p> <br>
+                        <p>Star Actors: </p><p id="star-actors"></p> <br>
+                    </div>
+                    <div id="poster-holder" class="column is-3">
+                        <img id="poster" src="" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
 
 
     <!-- scripts -->

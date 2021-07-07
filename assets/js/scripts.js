@@ -1,5 +1,8 @@
 var posterDisplay = document.getElementById("shared-movie-container")
-
+var year = document.getElementById("year-released")
+var director = document.getElementById("director")
+var gross = document.getElementById("gross")
+var starActors = document.getElementById("star-actors")
 
 // set up date and clock
 var todaysDate = document.querySelector('#currentDate');
@@ -149,6 +152,10 @@ function checkSecondActor() {
 }
 
 function getMovieInfo() {
+    year.innerHTML = ""
+    director.innerHTML = ""
+    gross.innerHTML = ""
+    starActors.innerHTML = ""
 
     userResonse3 = document.querySelector('#movieChoice').value
 
@@ -159,8 +166,29 @@ function getMovieInfo() {
             return response.json();
         })
         .then(function (response) {
+            
+
+
             console.log(response)
+            var yearReleased = document.createElement("p")
+            yearReleased.innerHTML = response.Year
+            year.appendChild(yearReleased)
+            var directedBy = document.createElement("p")
+            directedBy.innerHTML = response.Director
+            director.appendChild(directedBy)
+            var boxOffice = document.createElement("p")
+            boxOffice.innerHTML = response.BoxOffice
+            gross.appendChild(boxOffice)
+            var actors = document.createElement("p")
+            actors.innerHTML = response.Actors
+            starActors.appendChild(actors)
+            
+
 })
 }
 
 document.getElementById("function2Btn").addEventListener("click", checkFirstActor)
+<<<<<<< HEAD
+=======
+document.getElementById("function3Btn").addEventListener("click",  getMovieInfo)
+>>>>>>> 43bb4d1d253c621fa36120cdf29eb12272e3a579
