@@ -14,7 +14,7 @@ body{
     background-image: url(../images/lion.jpg);
     background-size: cover;
     background-position: center;
-    height: 1000px;
+    height: 950px;
 }
 
 .choice-container{
@@ -109,6 +109,10 @@ footer{
 
 .repos{
     padding: 5px 10px;
+}
+
+input{
+    width: 100%;
 }
 
 
