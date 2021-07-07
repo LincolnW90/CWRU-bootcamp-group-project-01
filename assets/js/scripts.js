@@ -197,3 +197,26 @@ function getMovieInfo() {
 
 document.getElementById("function2Btn").addEventListener("click", checkFirstActor)
 document.getElementById("function3Btn").addEventListener("click",  getMovieInfo)
+
+
+
+// save search functions
+savedSearches2 = []
+function saveSearch2(){
+    actor1 = $('#choice-1').val().trim();
+    actor2 = $('#choice-2').val().trim();
+    // actors = [actor1, actor2]
+    // results = document.querySelector('#shared-movie-container').innerHTML;
+    console.log(actor1);
+    console.log(actor2);
+    // console.log(actors);
+    // console.log(results);
+    savedSearches2obj = {firstActor: actor1, secondActor: actor2, results: document.querySelector('#shared-movie-container').innerHTML
+    }
+    savedSearches2.push(savedSearches2obj);
+    console.log(savedSearches2)
+    localStorage.setItem('savedData', JSON.stringify(savedSearches2));
+}
+document.querySelector('#saveFunction2').addEventListener('click',saveSearch2);
+
+
