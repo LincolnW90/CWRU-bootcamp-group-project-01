@@ -163,8 +163,4 @@ function getMovieInfo() {
 })
 }
 
-function saveFunction1() {
-
-}
-
 document.getElementById("function2Btn").addEventListener("click", checkFirstActor)
