@@ -67,3 +67,11 @@ padding-bottom: 20px;
 .hidden{
     display: none;
 }
+
+.gradient{
+    background: linear-gradient(to right,#03b8c5,#017179)
+}
+
+.btnColor{
+    color: white;
+}
