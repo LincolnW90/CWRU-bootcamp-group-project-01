@@ -5,6 +5,10 @@
     line-height: 1.5;
 }
 
+img{
+    max-height: 300px;
+}
+
 body{
     text-align: center;
     background-image: url(../images/lion.jpg);
@@ -79,3 +83,12 @@ padding-bottom: 20px;
     font-weight: bolder;
     border-bottom: black solid 1px;
 }
+.response{
+    min-height: 20px;
+}
+
+#shared-movie-container{
+    max-height: 500px;
+    overflow-y: auto;
+}
+
