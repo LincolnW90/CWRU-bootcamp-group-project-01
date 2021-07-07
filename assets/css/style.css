@@ -34,6 +34,11 @@ header{
 
 button{
     font-size: larger;
+    padding: 3px 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background: linear-gradient(to right,#C4B454,#3B3D00);
+    color: white;
 }
 
 header{
@@ -52,6 +57,7 @@ a{
     color: white;
     border: black solid 1px;
     border-radius: 5px;
+    padding: 3px 10px;
 }
 #clock-container{
 padding-bottom: 20px;
@@ -59,19 +65,6 @@ padding-bottom: 20px;
 #saveFunction1{
     margin: auto;
 }
-
-/* .hidden{
-    display: none;
-} */
-
-.gradient{
-    background: linear-gradient(to right,#03b8c5,#017179)
-}
-
-.btnColor{
-    color: white;
-}
-
 
 .welcome{
     font-size: xx-large;
@@ -107,12 +100,45 @@ footer{
     display: flex;
 }
 
-.repos{
-    padding: 5px 10px;
-}
-
 input{
     width: 100%;
+    text-align: center;
+}
+
+#history-title{
+    width: 50%;
+    border-bottom: black solid 3px;
+    justify-content: center;
+    text-align: center;
+}
+
+#history-list{
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+#title{
+border: transparent;
+}
+
+#historySearches{
+    max-height: 600px;
+    overflow-y: auto;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+#historySearches p{
+    padding: 10px 0;
+    margin-top: 10px;
 }
 
 
+
+/* media queries */
+@media screen and (max-width:1200px) {
+    footer{
+        display: none;
+    }
+    
+}

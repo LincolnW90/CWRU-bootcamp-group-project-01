@@ -5,36 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saved Searches</title>
+    <link rel="icon" type="image/png" href="assets/images/popcorn-favicon.gif" sizes="32x32" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <header>
         <div class="columns">
-            <h1 class="column" id="title">Movie Matcher!</h1>
+            <a href="index.html" class="column is-3" id="title">Movie Matcher!</a>
             <div id="clock-container" class="column has-text-right">
                 <p id="currentDate"></p>
                 <p id="currentTime"></p>
             </div>
         </div>
     </header>
-    <div class="container">
-        <h1 id="history-title">Your Saved Searches</h1>
-        <div id="history" class="columns choice-container">
-            <div class="column">
-                <ul>
-                    <li>test</li>
-                </ul>
+    <div class="columns is-justify-content-center">
+        <div id="history" class="choice-container column is-6">
+            <div class="columns is-justify-content-center">
+                <h1 id="history-title" class="column is-4">Your Saved Searches</h1>
+            </div>
+            <div class="columns">
+                <div class="column" >
+                    <ul id="historySearches"></ul>
+                </div>
+                <!-- <div class="column" >
+                    <ul id="historyResults"></ul>
+                </div> -->
             </div>
         </div>
+    </div>
+    <div>
+        <button id="clear-historyBtn">Clear History</button>
     </div>
 
     <footer>
         <p class="column">A collaborative effort. Check out our individual repositories</p>
         <div class="column">
-            <a href="" class="repos">Lincoln Weiss</a>
-            <a href="" class="repos">Logan Dufek</a>
-            <a href="" class="repos">Mason Cain</a>
+            <a href="https://lincolnw90.github.io/Portfolio/" class="repos">Lincoln Weiss</a>
+            <a href="https://logandufek.github.io/ProfessionalPortfolio-CSS/
+            " class="repos">Logan Dufek</a>
+            <a href="https://mason021.github.io/Professional-Portfolio/
+            " class="repos">Mason Cain</a>
             <a href="" class="repos">Enobong Ukpeh</a>
         </div>
     </footer>
@@ -42,6 +53,6 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="./assets/js/scripts.js"></script>
+    <script src="./assets/js/history.js"></script>
 </body>
 </html>
