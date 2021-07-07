@@ -63,3 +63,7 @@ padding-bottom: 20px;
 #saveFunction1{
     margin: auto;
 }
+
+.hidden{
+    display: none;
+}

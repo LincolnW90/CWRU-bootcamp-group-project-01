@@ -47,7 +47,7 @@
 
         <!-- choose function divs -->
         <!-- 1st function section -->
-        <div id="function1-container" class="columns has-border-width-3 function-container">
+        <div id="function1-container" class="columns has-border-width-3 function-container hidden">
             <div id="function1-block" class="column">
                 <div class="columns is-justify-content-center">
                     <div class="column choice-container is-4">
@@ -73,13 +73,13 @@
             <div id="function2-block" class="column choice-container">
                 <p>Enter the names of the actors you want to compare</p>
                 <div class="columns">
-                    <div  class="column is-3 is-offset-3 choice-container">
+                    <div id="choice-1" class="column is-3 is-offset-3 choice-container">
                         <p>Enter your first actor</p>
-                        <input id="choice-1"  placeholder="Actors name"></input> <br>
+                        <input placeholder="Actors name"></input> <br>
                     </div>
-                    <div class="column is-3 choice-container">
+                    <div id="choice-2" class="column is-3 choice-container">
                         <p>Enter your second actor</p>
-                        <input id="choice-2" placeholder="Actors name"></input> <br>
+                        <input placeholder="Actors name"></input> <br>
                     </div>
                 </div>
                 <button type="submit" id="function2Btn">Find Their Shared Movies</button>
@@ -100,7 +100,7 @@
                 <p>Enter the name of the movie you want to know about</p>
                 <div class="columns choice-container">
                     <div class="column">
-                        <input id="movieChoice" placeholder="Movie name"></input> <br>
+                        <input placeholder="Movie name"></input> <br>
                         <button id="function3Btn">Find info</button> <br>
                         <p>Year released: </p><p id="year-released"></p> <br>
                         <p>Directed by: </p><p id="director"></p>   <br>
