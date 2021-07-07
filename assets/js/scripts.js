@@ -183,7 +183,7 @@ function getMovieInfo() {
             starActors.appendChild(actors)
             var rating = document.createElement("p")
             rating.innerHTML =  response.Ratings[1].Value
-            rottenTomatoes.appendChild(actors)
+            rottenTomatoes.appendChild(rating)
             var singlePoster = document.createElement("img")
             singlePoster.setAttribute("src", response.Poster)
             posterForMovie.appendChild(singlePoster)
