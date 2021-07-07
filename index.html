@@ -13,7 +13,7 @@
 <body>
     <header>
         <div class="columns">
-            <h1 class="column" id="title">Movie Matcher!</h1>
+            <h1 class="column is-3" id="title">Movie Matcher!</h1>
             <div id="clock-container" class="column has-text-right">
                 <p id="currentDate"></p>
                 <p id="currentTime"></p>
@@ -31,10 +31,6 @@
         </section>
         <!-- open page choices -->
         <div id="choice-container" class="columns">
-            <div class="column  choice-container">
-                <p>Can't remember all the films your favorite actor has been in? Wonder no more!</p>
-                <button class="column is-4 is-offset-4" id="function1show">Find your actor's films</button>
-            </div>
             <div class="column choice-container">
                 <p>Want to know what movie some actors were both in? We can figure that out for you!</p>
                 <button class="column is-4 is-offset-4" id="function2show">Find shared films</button>
@@ -46,28 +42,6 @@
         </div>
 
         <!-- choose function divs -->
-        <!-- 1st function section -->
-        <div id="function1-container" class="columns has-border-width-3 function-container">
-            <div id="function1-block" class="column">
-                <div class="columns is-justify-content-center">
-                    <div class="column choice-container is-4">
-                        <p>Which actor are you looking for?</p>
-                        <input placeholder="Actors name"></input> <br>
-                        <button type="submit" id="function1Btn">Find their movies</button>
-                    </div>
-                    <!-- display top movie results div -->
-                    <div class="column is-4 choice-container">
-                        <p>Your actors top movies</p>
-                        <ul id="top-movies-holder">
-                            <li>***test***</li>
-                        </ul>
-                    </div>
-                </div>
-                <div id="Btn-container" class="columns is-justify-content-center">
-                    <button id="saveFunction1" class="saveBtn">Save This Search</button>
-                </div>
-            </div>
-        </div>
         <!-- 2nd function section -->
         <div id="function2-container" class="column has-border-width-3 function-container">
             <div id="function2-block" class="column choice-container">
@@ -85,9 +59,7 @@
                 <button type="submit" id="function2Btn">Find Their Shared Movies</button>
                 <div id="shared-movie-container" class="column is-4 is-offset-4 choice-container">
                     <p>Shared Movies</p>
-                    <ul id="list-of-shared-movies">
-                        ***test***
-                    </ul>
+                    <ul id="list-of-shared-movies"></ul>
                 </div>
             </div>
             <div id="Btn-container" class="columns is-justify-content-center">
@@ -108,9 +80,9 @@
                         <p>Directed by: </p><p id="director"></p> <br>
                         <p>Domestic Gross: </p><p id="Total-box-office-sales"></p> <br>
                         <p>Star Actors: </p><p id="star-actors"></p> <br>
+                        <p>Rotten Tomatoes Score: </p><p id="rotten-tomatoes"></p>
                     </div>
                     <div id="poster-holder" class="column is-3">
-                        <img id="poster" src="" alt="">
                     </div>
                 </div>
             </div>
