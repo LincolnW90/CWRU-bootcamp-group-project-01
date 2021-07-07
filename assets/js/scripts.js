@@ -201,12 +201,23 @@ function getMovieInfo() {
             var actors = document.createElement("p")
             actors.innerHTML = response.Actors
             starActors.appendChild(actors)
+<<<<<<< HEAD
             var rating = document.createElement("p")
             rating.innerHTML = response.Ratings[1].Value
             rottenTomatoes.appendChild(rating)
             var singlePoster = document.createElement("img")
             singlePoster.setAttribute("src", response.Poster)
             posterForMovie.appendChild(singlePoster)
+=======
+            // var rating = document.createElement("p")
+            // rating.innerHTML =  response.Ratings[1].Value
+            // rottenTomatoes.appendChild(rating)
+            rottenTomatoes.innerHTML = '🍅🍅' + response.Ratings[1].Value + '🍅🍅'
+            // var singlePoster = document.createElement("img")
+            // singlePoster.setAttribute("src", response.Poster)
+            // posterForMovie.appendChild(singlePoster)
+            posterForMovie.setAttribute('src', response.Poster)
+>>>>>>> 9953d3594be16211c89a8e49861b150047204885
 
 
 
@@ -214,4 +225,31 @@ function getMovieInfo() {
 }
 
 document.getElementById("function2Btn").addEventListener("click", checkFirstActor)
+<<<<<<< HEAD
 document.getElementById("function3Btn").addEventListener("click", getMovieInfo)
+=======
+document.getElementById("function3Btn").addEventListener("click",  getMovieInfo)
+
+
+
+// save search functions
+savedSearches2 = []
+function saveSearch2(){
+    actor1 = $('#choice-1').val().trim();
+    actor2 = $('#choice-2').val().trim();
+    // actors = [actor1, actor2]
+    // results = document.querySelector('#shared-movie-container').innerHTML;
+    console.log(actor1);
+    console.log(actor2);
+    // console.log(actors);
+    // console.log(results);
+    savedSearches2obj = {firstActor: actor1, secondActor: actor2, results: document.querySelector('#shared-movie-container').innerHTML
+    }
+    savedSearches2.push(savedSearches2obj);
+    console.log(savedSearches2)
+    localStorage.setItem('savedData', JSON.stringify(savedSearches2));
+}
+document.querySelector('#saveFunction2').addEventListener('click',saveSearch2);
+
+
+>>>>>>> 9953d3594be16211c89a8e49861b150047204885
