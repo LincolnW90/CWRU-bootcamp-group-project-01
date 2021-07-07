@@ -10,13 +10,7 @@ body{
     background-image: url(../images/lion.jpg);
     background-size: cover;
     background-position: center;
-}
-
-#choice-container{
-    /* for testing */
-    border-bottom: black solid;
-    justify-content: center;
-    text-align: center;
+    height: 1000px;
 }
 
 .choice-container{
@@ -29,14 +23,9 @@ body{
 }
 
 header{
+    background: rgb(2,0,36);
+    background: linear-gradient(9deg, rgba(2,0,36,1) 0%, rgba(255,255,255,1) 100%, rgba(0,212,255,1) 100%);
     color: white;
-    background-color: royalblue;
-}
-
-.function-container{
-    border-bottom: black solid;
-    justify-content: center;
-    padding-bottom: 30px;
 }
 
 button{
@@ -77,4 +66,16 @@ padding-bottom: 20px;
 
 .btnColor{
     color: white;
+}
+
+
+.welcome{
+    font-size: xx-large;
+}
+.information{
+    font-size: large;
+}
+.info{
+    font-weight: bolder;
+    border-bottom: black solid 1px;
 }
