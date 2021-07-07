@@ -1,8 +1,10 @@
 var posterDisplay = document.getElementById("shared-movie-container")
 var year = document.getElementById("year-released")
 var director = document.getElementById("director")
-var gross = document.getElementById("gross")
+var gross = document.getElementById("Total-box-office-sales")
 var starActors = document.getElementById("star-actors")
+var rottenTomatoes = document.getElementById("rotten-tomatoes")
+var posterForMovie = document.getElementById("poster-holder")
 
 // set up date and clock
 var todaysDate = document.querySelector('#currentDate');
@@ -26,7 +28,6 @@ userResponse1 = ""
 userResponse2 = ""
 
 function checkFirstActor() {
-    debugger
     //user responses, set as defined strings currently but will be set to take in values based on what the user types in
     posterDisplay.innerHTML = ""
     filmArray1.length = 0
@@ -167,8 +168,6 @@ function getMovieInfo() {
         })
         .then(function (response) {
             
-
-
             console.log(response)
             var yearReleased = document.createElement("p")
             yearReleased.innerHTML = response.Year
@@ -182,6 +181,13 @@ function getMovieInfo() {
             var actors = document.createElement("p")
             actors.innerHTML = response.Actors
             starActors.appendChild(actors)
+            var rating = document.createElement("p")
+            rating.innerHTML =  response.Ratings[1].Value
+            rottenTomatoes.appendChild(rating)
+            var singlePoster = document.createElement("img")
+            singlePoster.setAttribute("src", response.Poster)
+            posterForMovie.appendChild(singlePoster)
+
             
 
 })
