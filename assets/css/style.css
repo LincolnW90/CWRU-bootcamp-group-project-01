@@ -5,18 +5,16 @@
     line-height: 1.5;
 }
 
+img{
+    max-height: 300px;
+}
+
 body{
     text-align: center;
     background-image: url(../images/lion.jpg);
     background-size: cover;
     background-position: center;
-}
-
-#choice-container{
-    /* for testing */
-    border-bottom: black solid;
-    justify-content: center;
-    text-align: center;
+    height: 950px;
 }
 
 .choice-container{
@@ -29,18 +27,18 @@ body{
 }
 
 header{
+    background: rgb(2,0,36);
+    background: linear-gradient(9deg, rgba(2,0,36,1) 0%, rgba(255,255,255,1) 100%, rgba(0,212,255,1) 100%);
     color: white;
-    background-color: royalblue;
-}
-
-.function-container{
-    border-bottom: black solid;
-    justify-content: center;
-    padding-bottom: 30px;
 }
 
 button{
     font-size: larger;
+    padding: 3px 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background: linear-gradient(to right,#C4B454,#3B3D00);
+    color: white;
 }
 
 header{
@@ -59,6 +57,7 @@ a{
     color: white;
     border: black solid 1px;
     border-radius: 5px;
+    padding: 3px 10px;
 }
 #clock-container{
 padding-bottom: 20px;
@@ -67,14 +66,79 @@ padding-bottom: 20px;
     margin: auto;
 }
 
-/* .hidden{
-    display: none;
-} */
-
-.gradient{
-    background: linear-gradient(to right,#03b8c5,#017179)
+.welcome{
+    font-size: xx-large;
+}
+.information{
+    font-size: large;
+}
+.info{
+    font-weight: bolder;
+    border-bottom: black solid 1px;
+}
+.response{
+    min-height: 20px;
 }
 
-.btnColor{
+#shared-movie-container{
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.function-description{
+    font-size: larger;
+    font-weight: bold;
+}
+
+footer{
     color: white;
+    background: rgb(2,0,36);
+    background: linear-gradient(9deg, rgba(2,0,36,1) 0%, rgba(255,255,255,1) 100%, rgba(0,212,255,1) 100%);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+}
+
+input{
+    width: 100%;
+    text-align: center;
+}
+
+#history-title{
+    width: 50%;
+    border-bottom: black solid 3px;
+    justify-content: center;
+    text-align: center;
+}
+
+#history-list{
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+#title{
+border: transparent;
+}
+
+#historySearches{
+    max-height: 600px;
+    overflow-y: auto;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+#historySearches p{
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+
+
+/* media queries */
+@media screen and (max-width:1200px) {
+    footer{
+        display: none;
+    }
+    
 }
