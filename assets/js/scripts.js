@@ -181,12 +181,14 @@ function getMovieInfo() {
             var actors = document.createElement("p")
             actors.innerHTML = response.Actors
             starActors.appendChild(actors)
-            var rating = document.createElement("p")
-            rating.innerHTML =  response.Ratings[1].Value
-            rottenTomatoes.appendChild(rating)
-            var singlePoster = document.createElement("img")
-            singlePoster.setAttribute("src", response.Poster)
-            posterForMovie.appendChild(singlePoster)
+            // var rating = document.createElement("p")
+            // rating.innerHTML =  response.Ratings[1].Value
+            // rottenTomatoes.appendChild(rating)
+            rottenTomatoes.innerHTML = '🍅🍅' + response.Ratings[1].Value + '🍅🍅'
+            // var singlePoster = document.createElement("img")
+            // singlePoster.setAttribute("src", response.Poster)
+            // posterForMovie.appendChild(singlePoster)
+            posterForMovie.setAttribute('src', response.Poster)
 
             
 
