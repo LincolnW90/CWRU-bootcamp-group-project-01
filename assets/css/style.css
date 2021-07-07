@@ -88,7 +88,27 @@ padding-bottom: 20px;
 }
 
 #shared-movie-container{
-    max-height: 500px;
+    max-height: 300px;
     overflow-y: auto;
 }
+
+.function-description{
+    font-size: larger;
+    font-weight: bold;
+}
+
+footer{
+    color: white;
+    background: rgb(2,0,36);
+    background: linear-gradient(9deg, rgba(2,0,36,1) 0%, rgba(255,255,255,1) 100%, rgba(0,212,255,1) 100%);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+}
+
+.repos{
+    padding: 5px 10px;
+}
+
 
