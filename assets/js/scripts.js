@@ -14,7 +14,7 @@ var currentTime = document.querySelector('#currentTime');
 var hours = moment().format('hh:mm:ss a')
 currentTime.innerHTML = hours
 // update time function
-var updateClock = setInterval(function(){
+var updateClock = setInterval(function () {
     var currentHour = moment().format('hh:mm:ss a');
     currentTime.innerHTML = currentHour
 }, 1000);
@@ -74,8 +74,11 @@ function checkFirstActor() {
         })
         .catch(err => {
             console.error(err);
+            var noPoster = document.createElement("img")
+            noPoster.setAttribute("src", "./assets/images/MovieMongoose2.png")
+            posterDisplay.appendChild(noPoster)
         });
-    
+
 }
 
 function checkSecondActor() {
@@ -111,6 +114,7 @@ function checkSecondActor() {
                 })
                 //build an array from the desired data for the second actor, to be checked with the first array
                 .then(function (response) {
+                    
                     for (var i = 0; i < response.Roles.movies.length; i++) {
                         if (filmArray2.includes(response.Roles.movies[i][0].title) === false) {
                             filmArray2.push(response.Roles.movies[i][0].title)
@@ -129,26 +133,40 @@ function checkSecondActor() {
                     console.log(filmArray1)
                     console.log(filmArray2)
                     console.log(finalResults)
-
+                    if (finalResults.length === 0) {
+                        
+                        var noPoster = document.createElement("img")
+                        noPoster.setAttribute("src", "./assets/images/MovieMongoose.png")
+                        posterDisplay.appendChild(noPoster)
+                    }
                     //for loop to iterate through this created array and retrieve the poster data from a new API
                     for (i = 0; i < finalResults.length; i++) {
                         matchedMovie = finalResults[i]
+
+
+
                         fetch("http://www.omdbapi.com/?s=" + matchedMovie + "&apikey=d86e2804")
                             .then(function (response) {
                                 return response.json();
                             })
                             .then(function (response) {
+
                                 var poster = response.Search[0].Poster
                                 var posterImg = document.createElement("img")
                                 posterImg.setAttribute("src", poster)
                                 posterDisplay.appendChild(posterImg)
                                 console.log(poster)
+
                             });
                     };
                 })
         })
         .catch(err => {
             console.error(err);
+ 
+            var noPoster = document.createElement("img")
+            noPoster.setAttribute("src", "./assets/images/MovieMongoose2.png")
+            posterDisplay.appendChild(noPoster)
         });
 }
 
@@ -157,17 +175,19 @@ function getMovieInfo() {
     director.innerHTML = ""
     gross.innerHTML = ""
     starActors.innerHTML = ""
-
-    userResonse3 = document.querySelector('#movieChoice').value
+    rottenTomatoes.innerHTML = ""
+    posterForMovie.innerHTML = ""
+    
+    userResponse3 = document.querySelector('#movieChoice').value
 
     fetch(
-        "http://www.omdbapi.com/?t=" + userResonse3 + "&apikey=d86e2804"
+        "http://www.omdbapi.com/?t=" + userResponse3 + "&apikey=d86e2804"
     )
         .then(function (response) {
             return response.json();
         })
         .then(function (response) {
-            
+
             console.log(response)
             var yearReleased = document.createElement("p")
             yearReleased.innerHTML = response.Year
@@ -182,16 +202,16 @@ function getMovieInfo() {
             actors.innerHTML = response.Actors
             starActors.appendChild(actors)
             var rating = document.createElement("p")
-            rating.innerHTML =  response.Ratings[1].Value
+            rating.innerHTML = response.Ratings[1].Value
             rottenTomatoes.appendChild(rating)
             var singlePoster = document.createElement("img")
             singlePoster.setAttribute("src", response.Poster)
             posterForMovie.appendChild(singlePoster)
 
-            
 
-})
+
+        })
 }
 
 document.getElementById("function2Btn").addEventListener("click", checkFirstActor)
-document.getElementById("function3Btn").addEventListener("click",  getMovieInfo)
+document.getElementById("function3Btn").addEventListener("click", getMovieInfo)

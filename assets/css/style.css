@@ -78,3 +78,16 @@ padding-bottom: 20px;
 .btnColor{
     color: white;
 }
+
+img {
+    border-radius: 5px;
+}
+
+#year-released, #director, #Total-box-office-sales, #star-actors, #rotten-tomatoes {
+    font-weight: 700;
+}
+#choice-1, #choice-2, #movieChoice {
+    margin: 12px 0;
+    text-align: center;
+}
+
