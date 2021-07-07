@@ -188,7 +188,4 @@ function getMovieInfo() {
 }
 
 document.getElementById("function2Btn").addEventListener("click", checkFirstActor)
-<<<<<<< HEAD
-=======
 document.getElementById("function3Btn").addEventListener("click",  getMovieInfo)
->>>>>>> 43bb4d1d253c621fa36120cdf29eb12272e3a579
