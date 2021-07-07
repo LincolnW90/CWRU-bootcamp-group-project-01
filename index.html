@@ -14,24 +14,26 @@
 <body>
     <header>
         <div class="columns">
-            <h1 class="column is-3" id="title">Movie Matcher!</h1>
+            <a href="index.html" class="column is-3" id="title">Movie Matcher!</a>
+            <div class="column is-6 opener">
+                <p class="welcome">Welcome to Movie Matcher!</p>
+                <p class="information">If you're here you like movies like we do. Below you'll find options to find out about actors shared movies, or just general information about your favorite movies</p>
+            </div>
             <div id="clock-container" class="column has-text-right">
                 <p id="currentDate"></p>
                 <p id="currentTime"></p>
                 <a href="./saved-searches.html">View Saved Searches</a>
             </div>
         </div>
+        <section class="">
+          
+        </section>
     </header>
     
     <div>
-        <section class="hero is-primary">
-            <div class="column is-8 is-offset-2">
-                <p class="title">Welcome to Movie Matcher!</p>
-                <p class="subtitle">If you're here you like movies like we do. Below you'll find some options to either find out about actors, their shared movies, or just general information about your favorite movies</p>
-            </div>
-        </section>
+
         <!-- open page choices -->
-        <div id="choice-container" class="columns">
+        <!-- <div id="choice-container" class="columns">
 
             <div class="column choice-container">
                 <p>Want to know what movie some actors were both in? We can figure that out for you!</p>
@@ -41,56 +43,67 @@
                 <p>Need to know more facts about a particular movie? We'll get you the basic rundown!</p>
                 <button class="column is-4 is-offset-4 gradient btnColor" id="function3show">Find out about a film</button>
             </div>
-        </div>
+        </div> -->
 
         <!-- choose function divs -->
 
         <!-- 2nd function section -->
-        <div id="function2-container" class="column has-border-width-3 function-container">
-            <div id="function2-block" class="column choice-container">
-                <p>Enter the names of the actors you want to compare</p>
+        <div id="function2-container" class="columns">
+            <div id="function2-block" class="column is-4 is-offset-2 choice-container">
+                <p class="function-description">Enter the names of the actors you want to compare</p>
                 <div class="columns">
-                    <div  class="column is-3 is-offset-3 choice-container">
+                    <div  class="column is-4 is-offset-2 choice-container">
                         <p>Enter your first actor</p>
                         <input id="choice-1" placeholder="Actors name"></input> <br>
                     </div>
-                    <div class="column is-3 choice-container">
+                    <div class="column is-4 choice-container">
                         <p >Enter your second actor</p>
                         <input id="choice-2" placeholder="Actors name"></input> <br>
                     </div>
                 </div>
-                <button type="submit" class="gradient btnColor" id="function2Btn">Find Their Shared Movies</button>
-                <div id="shared-movie-container" class="column is-4 is-offset-4 choice-container">
-                    <p>Shared Movies</p>
-                    <ul id="list-of-shared-movies"></ul>
+                <button type="submit" id="function2Btn" class="btnColor gradient">Find Their Shared Movies</button>
+                <div id="shared-movie-container" class="column is-8 is-offset-2 choice-container">
+                </div>
+                <div id="Btn-container" class="columns is-justify-content-center btnColor">
+                    <button id="saveFunction2" class="saveBtn gradient btnColor">Save This Search</button>
                 </div>
             </div>
-            <div id="Btn-container" class="columns is-justify-content-center">
-                <button id="saveFunction2" class="saveBtn gradient btnColor">Save This Search</button>
-            </div>
-        </div>
-        <!-- 3rd function section -->
-        <div id="function3-container" class="column has-border-width-3 function-container">
-            <div id="function3-block" class="column choice-container">
-                <p>Enter the name of the movie you want to know about</p>
+            <!-- end function cont -->
+
+            <!-- 2nd function block -->
+            <div id="function3-block" class="column is-4 choice-container">
+                <p class="function-description">Enter the name of the movie you want to know about</p>
                 <div class="column">
                     <input id="movieChoice" placeholder="Movie name"></input> <br>
-                    <button class="gradient btnColor" id="function3Btn">Find info</button> <br>
+                    <button id="function3Btn" class="btnColor gradient">Find info</button> <br>
                 </div>
-                <div class="columns choice-container">
-                    <div class="column is-3">
-                        <p>Year released: </p><p id="year-released"></p> <br>
-                        <p>Directed by: </p><p id="director"></p> <br>
-                        <p>Domestic Gross: </p><p id="Total-box-office-sales"></p> <br>
-                        <p>Star Actors: </p><p id="star-actors"></p> <br>
-                        <p>Rotten Tomatoes Score: </p><p id="rotten-tomatoes"></p>
+                <div class="columns">
+                    <div class="column" id="movieInfo">
+                        <p class="info">Year released: </p><p id="year-released" class="response"></p> <br>
+                        <p class="info">Directed by: </p><p id="director" class="response"></p> <br>
+                        <p class="info">Domestic Gross: </p><p id="Total-box-office-sales" class="response"></p> <br>
+                        <p class="info">Star Actors: </p><p id="star-actors" class="response"></p> <br>
+                        <p class="info">Rotten Tomatoes Score: </p><p id="rotten-tomatoes" class="response"></p>
                     </div>
-                    <div id="poster-holder" class="column is-3">
+                    <div class="column">
+                        <img id="poster-holder" src="" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <footer>
+        <p class="column">A collaborative effort. Check out our individual repositories</p>
+        <div class="column">
+            <a href="https://lincolnw90.github.io/Portfolio/" class="repos">Lincoln Weiss</a>
+            <a href="https://logandufek.github.io/ProfessionalPortfolio-CSS/
+            " class="repos">Logan Dufek</a>
+            <a href="https://mason021.github.io/Professional-Portfolio/
+            " class="repos">Mason Cain</a>
+            <a href="" class="repos">Enobong Ukpeh</a>
+        </div>
+    </footer>
 
 
     <!-- scripts -->
