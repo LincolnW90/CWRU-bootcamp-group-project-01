@@ -102,6 +102,7 @@ footer{
 
 input{
     width: 100%;
+    text-align: center;
 }
 
 #history-title{
@@ -130,4 +131,14 @@ border: transparent;
 #historySearches p{
     padding: 10px 0;
     margin-top: 10px;
+}
+
+
+
+/* media queries */
+@media screen and (max-width:1200px) {
+    footer{
+        display: none;
+    }
+    
 }

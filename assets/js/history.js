@@ -1,6 +1,6 @@
 savedSearches2 = JSON.parse(localStorage.getItem('savedData'));
 historyActors = document.getElementById('historySearches');
-historyPosters = document.getElementById('historyResults');
+
 
 function propogate(){
     for(i=0; i<savedSearches2.length; i++){
@@ -16,5 +16,12 @@ function propogate(){
         historyActors.appendChild(list2)
     }
 }
+
+function clearHistory(){
+    localStorage.clear();
+    historyActors.innerHTML = ''
+}
+document.getElementById('clear-historyBtn').addEventListener('click',clearHistory);
+
 
 propogate();
