@@ -39,6 +39,11 @@ button{
     border-radius: 5px;
     background: linear-gradient(to right,#C4B454,#3B3D00);
     color: white;
+    transition-duration: 0.4s;
+}
+
+button:hover{
+    background: linear-gradient(to right,#3B3D00, #C4B454);
 }
 
 header{
