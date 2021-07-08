@@ -181,7 +181,7 @@ function getMovieInfo() {
     userResponse3 = document.querySelector('#movieChoice').value
 
     fetch(
-        "http://www.omdbapi.com/?t=" + userResponse3 + "&apikey=d86e2804"
+        "https://www.omdbapi.com/?t=" + userResponse3 + "&apikey=d86e2804"
     )
         .then(function (response) {
             return response.json();
