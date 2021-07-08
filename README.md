@@ -4,9 +4,9 @@
 ##
 a website that allows you to find out about actors shared movies, or just general information about your favorite movies
 
-![working-project]()
+![working-project](https://github.com/LincolnW90/Movie-Matcher/blob/mason/assets/images/Gif%20w%20hover%20btns.gif)
 
-![working-project]()
+![working-project](https://github.com/LincolnW90/Movie-Matcher/blob/mason/assets/images/GIF%20of%20project.gif)
 
 ![image](https://user-images.githubusercontent.com/82064247/124845713-e3fe2100-df5c-11eb-8de8-b4feb9c0fb88.png)
 
