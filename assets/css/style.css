@@ -41,6 +41,10 @@ button{
     color: white;
 }
 
+button:hover{
+    background: linear-gradient(to right,#3B3D00, #C4B454);
+}
+
 header{
     padding: 0 5%;
 }
