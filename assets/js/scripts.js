@@ -145,7 +145,7 @@ function checkSecondActor() {
 
 
 
-                        fetch("http://www.omdbapi.com/?s=" + matchedMovie + "&apikey=d86e2804")
+                        fetch("https://www.omdbapi.com/?s=" + matchedMovie + "&apikey=d86e2804")
                             .then(function (response) {
                                 return response.json();
                             })
